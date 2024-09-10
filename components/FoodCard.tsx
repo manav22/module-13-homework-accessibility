@@ -33,6 +33,7 @@ export function FoodCard(props: FormCardProps) {
         },
       ]}
       asChild
+      accessibilityRole="button"
     >
       <Pressable>
         <Image source={props.image} style={styles.thumbnail} />

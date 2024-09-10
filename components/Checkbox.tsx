@@ -54,6 +54,14 @@ function Checkbox(props: {
 
   return (
     <TouchableOpacity
+      accessibilityState={{
+        checked: props.checked,
+      }}
+      accessibilityRole="checkbox"
+      hitSlop={{
+        top: 10,
+        bottom: 10,
+      }}
       style={styles.checkbox}
       onPress={() => {
         props.onPress(props.label);
