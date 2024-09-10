@@ -41,6 +41,14 @@ function Radio(props: {
 }) {
   return (
     <TouchableOpacity
+      accessibilityState={{
+        selected: props.selected,
+      }}
+      accessibilityRole="radio"
+      hitSlop={{
+        top: 10,
+        bottom: 10,
+      }}
       onPress={() => {
         props.onPress(props.label);
       }}

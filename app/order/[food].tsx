@@ -91,8 +91,18 @@ export default function Order() {
             undefined
       }
     >
-      <Link href="../" asChild>
-        <Pressable>
+      <Link
+        href="../"
+        asChild
+        accessibilityElementsHidden={Platform.OS === 'ios'}
+        accessibilityRole="button"
+      >
+        <Pressable
+          hitSlop={{
+            top: 7,
+            bottom: 7,
+          }}
+        >
           <ThemedText style={styles.goBack} type="link">
             Back
           </ThemedText>
